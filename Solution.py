@@ -526,4 +526,76 @@ int main()
     pyramid(n);
     return 0; 
 }
+------------------------------------------------
+//To find the root of a Qudratic Equation
+/*
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    float a, b, c, x1, x2, d, rp, ip;
+    cout<<"Enter coefficient a, b and c : "<<endl;
+    cin>> a >> b >>c;
+
+    d =  b*b - 4*a*c;
+    if (d > 0)
+    {
+        x1 =  (-b +sqrt(d))/(2*a);
+        x2 =  (-b -sqrt(d))/(2*a);
+        cout << "Roots are Real and different"<<endl;
+        cout <<"The value of x1 is "<< x1 <<endl;
+        cout <<"The value of x2 is "<< x2 <<endl;
+    }
+    else if (d == 0)
+    {
+        cout<<"Roots are real and same"<<endl;
+        x1 = -b / (2*a);
+        cout <<"x1 = x2"<<x1<<endl;
+    }
+    else
+    {
+        rp = -b/(2*a);
+        ip = sqrt(-d/(2*a));
+        cout<<"Roots are complex and different"<<endl;
+        cout<<"x1 = "<<rp<<"+"<<ip<<"i"<<endl;
+    }
+
+    return 0;
+}
 */
+----------------------------------------------------------------
+
+// To find the fibonacci Series upto n number of times
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n, t1 = 0, t2 = 1, nextTerm = 0;
+    cout<<"Enter number of terms: ";
+    cin>>n;
+
+    cout << "Fibonacci Series";
+    for (int i = 1; i<= n; i++)
+    {
+        if(i == 1){
+            cout<<" "<<t1<<" ";
+            continue;
+        }
+        if(i == 2){
+            cout<< t2<<" ";
+            continue;
+        }
+        nextTerm = t1 + t2;
+        t1 =  t2;
+        t2 =  nextTerm;
+
+        cout << nextTerm << " ";
+    }
+    return 0 ;
+}
+
